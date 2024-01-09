@@ -28,7 +28,7 @@ contract Registry is Ownable {
     event Registered(uint network, address contractAddress, uint id);
     event Edited(uint network, address contractAddress, uint id);
 
-    constructor() {}
+    constructor() Ownable(msg.sender) {}
 
     function addEntry(
         uint _network,
